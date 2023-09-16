@@ -1,7 +1,7 @@
 var init = (function () {
-  const isInFrame = window.frameElement;
+  const referer = document.referrer;
 
-  if (isInFrame) {
+  if (referer.includes("salesforce-experience.com")) {
     const iframeElement = document.createElement("iframe");
     iframeElement.src =
       "https://docs.google.com/forms/d/e/1FAIpQLScQpVWXXXVkXR3jj8INR9EKDquUUYi8lLisjDMVlDxhtmS3Ow/viewform?embedded=true";
